@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/apicart/getlist">
+        <service class="ApiAssess\MsgAssess\Api\CartApiInterface" method="getCartList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/apicart/getid">
+        <service class="ApiAssess\MsgAssess\Api\CartApiInterface" method="getCartById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/apicart/save">
+        <service class="ApiAssess\MsgAssess\Api\CartApiInterface" method="saveCart"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/apicart/update">
+        <service class="ApiAssess\MsgAssess\Api\CartApiInterface" method="updateCart"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/apicart/delete">
+        <service class="ApiAssess\MsgAssess\Api\CartApiInterface" method="deleteCartById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
